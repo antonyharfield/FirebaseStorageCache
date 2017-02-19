@@ -6,11 +6,11 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseStorage
 
 extension UIWebView {
     
-    func loadHTML(storageReference: FIRStorageReference, cache: FirebaseStorageCache = .main, postProcess: ((Data) -> Data)? = nil) {
+    public func loadHTML(storageReference: FIRStorageReference, cache: FirebaseStorageCache = .main, postProcess: ((Data) -> Data)? = nil) {
         
         cache.get(storageReference: storageReference) { data in
             if let data = data {

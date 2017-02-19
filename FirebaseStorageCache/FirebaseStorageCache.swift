@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseStorage
 
-class FirebaseStorageCache {
+public class FirebaseStorageCache {
     
     fileprivate let cache: Cache
     
@@ -17,7 +17,7 @@ class FirebaseStorageCache {
         self.cache = cache
     }
     
-    func get(storageReference: FIRStorageReference, completion: @escaping (_ object: Data?) -> Void) {
+    public func get(storageReference: FIRStorageReference, completion: @escaping (_ object: Data?) -> Void) {
         
         let filePath = self.filePath(storageReference: storageReference)
         
@@ -59,7 +59,7 @@ class FirebaseStorageCache {
         })
     }
     
-    func remove(storageReference: FIRStorageReference) {
+    public func remove(storageReference: FIRStorageReference) {
         cache.remove(key: filePath(storageReference: storageReference), completion: nil)
     }
     
