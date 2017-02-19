@@ -81,12 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				EDC78D251E593F5A005F72DD /* FirebaseStorageCache.swift */,
+				EDC78D2D1E594211005F72DD /* Cache.swift */,
 				EDC78D261E593F5A005F72DD /* DiskCache.swift */,
 				EDC78D271E593F5A005F72DD /* UIImageView+FirebaseStorageCache.swift */,
 				EDC78D281E593F5A005F72DD /* UIWebView+FirebaseStorageCache.swift */,
 				EDC78D1D1E593853005F72DD /* FirebaseStorageCache.h */,
 				EDC78D1E1E593853005F72DD /* Info.plist */,
-				EDC78D2D1E594211005F72DD /* Cache.swift */,
 			);
 			path = FirebaseStorageCache;
 			sourceTree = "<group>";
