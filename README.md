@@ -55,7 +55,7 @@ imageView.setImage(storageReference: ref)
 Simple:
 
 ```swift
-webView.loadHTML(storageReference: pageReference)
+webView.loadHTML(storageReference: ref)
 ```
 
 With post processing on the HTML:
@@ -67,7 +67,7 @@ let styleHTML: (Data) -> Data = { data in
             preData.append(data)
             return preData
         }
-webView.loadHTML(storageReference: pageReference, postProcess: styleHTML)
+webView.loadHTML(storageReference: ref, postProcess: styleHTML)
 ```
 
 ## Author
