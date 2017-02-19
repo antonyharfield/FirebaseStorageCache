@@ -25,7 +25,7 @@ pod 'FirebaseStorageCache'
 
 ## Usage
 
-### Use the default shared 
+### Use the default shared cache
 
 ```swift
 let ref: FIRStorageReference = ...
