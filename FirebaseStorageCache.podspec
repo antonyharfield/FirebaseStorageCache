@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirebaseStorageCache"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "FIRStorage for iOS with caching and offline capabilities."
 
   # This description is used to generate tags and improve search results.
@@ -118,7 +118,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "FirebaseStorage"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -133,9 +133,15 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
-
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+
+  s.pod_target_xcconfig = {
+#    'OTHER_LDFLAGS' => '$(inherited) -ObjC',
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/**',
+#    'USER_HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FirebaseCore.framework/Modules',
+#    'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/FirebaseCore.framework/Modules',
+#    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+  }
 
 end
