@@ -44,12 +44,31 @@ firStorageCache.get(storageReference: ref) { data in
 }
 ```
 
-### Extension for UIImageView
+### Extension for loading images (in UIImageView)
 
 ```swift
 imageView.setImage(storageReference: ref)
 ```
 
+### Extension for loading web pages (in UIWebView)
+
+Simple:
+
+```swift
+webView.loadHTML(storageReference: pageReference)
+```
+
+With post processing on the HTML:
+
+```swift
+let styleHTML: (Data) -> Data = { data in
+            let pre = "<style>body {margin: 16px}</style>"
+            var preData = pre.data(using: .utf8) ?? Data()
+            preData.append(data)
+            return preData
+        }
+webView.loadHTML(storageReference: pageReference, postProcess: styleHTML)
+```
 
 ## Author
 
