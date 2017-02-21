@@ -50,7 +50,7 @@ firStorageCache.get(storageReference: ref) { data in
 imageView.setImage(storageReference: ref)
 ```
 
-### Extension for loading web pages (in UIWebView)
+### Extension for loading web pages (in UIWebView and WKWebView)
 
 Simple:
 
