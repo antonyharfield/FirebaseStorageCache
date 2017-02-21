@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C844C75465FCD29AE0EF04F6 /* Pods_FirebaseStorageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBC9B3ACA6EE137C6DCC705 /* Pods_FirebaseStorageCache.framework */; };
+		102E53938C0DF2C783EC9A97 /* Pods_FirebaseStorageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8383C0D65CA3C0A92A0EC2 /* Pods_FirebaseStorageCache.framework */; };
 		EDC78D1F1E593853005F72DD /* FirebaseStorageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC78D1D1E593853005F72DD /* FirebaseStorageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDC78D291E593F5A005F72DD /* FirebaseStorageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC78D251E593F5A005F72DD /* FirebaseStorageCache.swift */; };
 		EDC78D2A1E593F5A005F72DD /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC78D261E593F5A005F72DD /* DiskCache.swift */; };
@@ -17,8 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05EC2DFD6DC003114B75676D /* Pods-FirebaseStorageCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseStorageCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseStorageCache/Pods-FirebaseStorageCache.release.xcconfig"; sourceTree = "<group>"; };
-		ACBC9B3ACA6EE137C6DCC705 /* Pods_FirebaseStorageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseStorageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		736BCBBB39F323ADC8B097EA /* Pods-FirebaseStorageCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseStorageCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseStorageCache/Pods-FirebaseStorageCache.debug.xcconfig"; sourceTree = "<group>"; };
+		7C8383C0D65CA3C0A92A0EC2 /* Pods_FirebaseStorageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseStorageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952FDFFE0059AD4621FF9F05 /* Pods-FirebaseStorageCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseStorageCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseStorageCache/Pods-FirebaseStorageCache.release.xcconfig"; sourceTree = "<group>"; };
 		EDC78D1A1E593853005F72DD /* FirebaseStorageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseStorageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC78D1D1E593853005F72DD /* FirebaseStorageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseStorageCache.h; sourceTree = "<group>"; };
 		EDC78D1E1E593853005F72DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		EDC78D271E593F5A005F72DD /* UIImageView+FirebaseStorageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+FirebaseStorageCache.swift"; sourceTree = "<group>"; };
 		EDC78D281E593F5A005F72DD /* UIWebView+FirebaseStorageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+FirebaseStorageCache.swift"; sourceTree = "<group>"; };
 		EDC78D2D1E594211005F72DD /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
-		FFB5BB451A29306FC223ABD1 /* Pods-FirebaseStorageCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseStorageCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseStorageCache/Pods-FirebaseStorageCache.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,26 +35,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C844C75465FCD29AE0EF04F6 /* Pods_FirebaseStorageCache.framework in Frameworks */,
+				102E53938C0DF2C783EC9A97 /* Pods_FirebaseStorageCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3EB0BBD9A1F20A2E3EFE3464 /* Pods */ = {
+		A92AB8BE5C18BA5AA6B85648 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FFB5BB451A29306FC223ABD1 /* Pods-FirebaseStorageCache.debug.xcconfig */,
-				05EC2DFD6DC003114B75676D /* Pods-FirebaseStorageCache.release.xcconfig */,
+				736BCBBB39F323ADC8B097EA /* Pods-FirebaseStorageCache.debug.xcconfig */,
+				952FDFFE0059AD4621FF9F05 /* Pods-FirebaseStorageCache.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7EB88115CDEF86E476DC8DB4 /* Frameworks */ = {
+		E137D776044520755C62F863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ACBC9B3ACA6EE137C6DCC705 /* Pods_FirebaseStorageCache.framework */,
+				7C8383C0D65CA3C0A92A0EC2 /* Pods_FirebaseStorageCache.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,8 +64,8 @@
 			children = (
 				EDC78D1C1E593853005F72DD /* FirebaseStorageCache */,
 				EDC78D1B1E593853005F72DD /* Products */,
-				3EB0BBD9A1F20A2E3EFE3464 /* Pods */,
-				7EB88115CDEF86E476DC8DB4 /* Frameworks */,
+				A92AB8BE5C18BA5AA6B85648 /* Pods */,
+				E137D776044520755C62F863 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,12 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDC78D221E593853005F72DD /* Build configuration list for PBXNativeTarget "FirebaseStorageCache" */;
 			buildPhases = (
-				F8AF3D57D3A20C771F3E2D70 /* [CP] Check Pods Manifest.lock */,
+				E6FAE69271B77997152D9D6A /* [CP] Check Pods Manifest.lock */,
 				EDC78D151E593853005F72DD /* Sources */,
 				EDC78D161E593853005F72DD /* Frameworks */,
 				EDC78D171E593853005F72DD /* Headers */,
 				EDC78D181E593853005F72DD /* Resources */,
-				561002EAC63A65511351B664 /* [CP] Copy Pods Resources */,
+				37D1458AFF49293AD158025F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +131,7 @@
 		EDC78D111E593853005F72DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Apptitude;
 				TargetAttributes = {
@@ -148,6 +149,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = EDC78D101E593853005F72DD;
 			productRefGroup = EDC78D1B1E593853005F72DD /* Products */;
@@ -170,7 +172,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		561002EAC63A65511351B664 /* [CP] Copy Pods Resources */ = {
+		37D1458AFF49293AD158025F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,7 +187,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseStorageCache/Pods-FirebaseStorageCache-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8AF3D57D3A20C771F3E2D70 /* [CP] Check Pods Manifest.lock */ = {
+		E6FAE69271B77997152D9D6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,7 +321,7 @@
 		};
 		EDC78D231E593853005F72DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFB5BB451A29306FC223ABD1 /* Pods-FirebaseStorageCache.debug.xcconfig */;
+			baseConfigurationReference = 736BCBBB39F323ADC8B097EA /* Pods-FirebaseStorageCache.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -341,7 +343,7 @@
 		};
 		EDC78D241E593853005F72DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05EC2DFD6DC003114B75676D /* Pods-FirebaseStorageCache.release.xcconfig */;
+			baseConfigurationReference = 952FDFFE0059AD4621FF9F05 /* Pods-FirebaseStorageCache.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
