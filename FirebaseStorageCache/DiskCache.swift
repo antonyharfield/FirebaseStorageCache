@@ -18,6 +18,7 @@ public class DiskCache: Cache {
     init(name: String, cacheDuration: TimeInterval = 3600) {
         self.name = name
         self.cachePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first! + "/" + name
+        //self.cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first! + "/" + name
         self.cacheDuration = cacheDuration
         
         fileManager = FileManager()
@@ -38,7 +39,7 @@ public class DiskCache: Cache {
                 modificationDate.addingTimeInterval(weakSelf.cacheDuration).timeIntervalSinceNow > 0,
                 let data = try? Data(contentsOf: URL(fileURLWithPath: fullPath)) {
                 
-                print("DiskCache: hit: \(key) \(modificationDate.addingTimeInterval(weakSelf.cacheDuration).timeIntervalSinceNow)")
+                print("DiskCache: hit: \(key)")
                 completion(data)
             }
             else {
@@ -91,6 +92,31 @@ public class DiskCache: Cache {
             
             print("DiskCache: removed: \(key)")
             completion?()
+        }
+    }
+    
+    internal func prune() {
+        writeQueue.async { [weak self] in
+            guard let weakSelf = self else {
+                return
+            }
+            
+            if weakSelf.fileManager.fileExists(atPath: weakSelf.cachePath), let filePaths = weakSelf.fileManager.enumerator(atPath: weakSelf.cachePath) {
+                
+                while let file = filePaths.nextObject() as? String {
+                    
+                    let filePath = "\(weakSelf.cachePath)/\(file)"
+                    if let attr = try? weakSelf.fileManager.attributesOfItem(atPath: filePath),
+                        let type = attr[FileAttributeKey.type] as? String,
+                        type != "NSFileTypeDirectory",
+                        let modificationDate = attr[FileAttributeKey.modificationDate] as? Date,
+                        modificationDate.addingTimeInterval(weakSelf.cacheDuration).timeIntervalSinceNow < 0 {
+                        
+                            try? weakSelf.fileManager.removeItem(atPath: filePath)
+                            print("DiskCache: pruning: \(file)")
+                    }
+                }
+            }
         }
     }
     

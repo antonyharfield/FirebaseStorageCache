@@ -78,5 +78,11 @@ extension FirebaseStorageCache {
         }
         return ""
     }
+    
+    public func prune() {
+        if let diskCache = cache as? DiskCache {
+            diskCache.prune()
+        }
+    }
 
 }
