@@ -70,6 +70,19 @@ let styleHTML: (Data) -> Data = { data in
 webView.loadHTML(storageReference: ref, postProcess: styleHTML)
 ```
 
+### Cleaning/pruning the cache
+
+In the `didFinishLaunchingWithOptions` of your AppDelegate, you should call the `prune()` 
+method of your disk caches to remove any old files:
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FIRApp.configure()
+        FirebaseStorageCache.main.prune()
+        return true
+    }
+```
+
 ## Author
 
 Antony Harfield, antonyharfield@gmail.com
