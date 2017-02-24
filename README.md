@@ -8,7 +8,7 @@ FIRStorage for iOS with caching and offline capabilities
 
 ## Demo
 
-To run the demo project, clone the repo, and run `pod install` before pressing play in Xcode.
+Clone/download [FirebaseOfflineAppDemo](https://github.com/antonyharfield/FirebaseOfflineAppDemo) and run `pod install` before pressing play in Xcode. The demo contains 3 examples: no caching, NSCache and FirebaseStorageCache.
 
 ## Requirements
 
