@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirebaseStorageCache"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "FIRStorage for iOS with caching and offline capabilities."
 
   # This description is used to generate tags and improve search results.
