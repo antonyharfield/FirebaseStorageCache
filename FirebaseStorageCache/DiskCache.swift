@@ -71,7 +71,7 @@ public class DiskCache: Cache {
                 } catch {}
             }
             
-            let attributes = [FileAttributeKey.modificationDate.rawValue: NSDate()]
+            let attributes = [FileAttributeKey.modificationDate: NSDate()]
             weakSelf.fileManager.createFile(atPath: fullPath, contents: data, attributes: attributes)
             print("DiskCache: saved: \(key)")
             completion?()
