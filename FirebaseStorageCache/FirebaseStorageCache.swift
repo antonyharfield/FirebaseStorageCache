@@ -17,7 +17,7 @@ public class FirebaseStorageCache {
         self.cache = cache
     }
     
-    public func get(storageReference: FIRStorageReference, completion: @escaping (_ object: Data?) -> Void) {
+    public func get(storageReference: StorageReference, completion: @escaping (_ object: Data?) -> Void) {
         
         let filePath = self.filePath(storageReference: storageReference)
         
@@ -42,7 +42,7 @@ public class FirebaseStorageCache {
                     guard let httpURLResponse = response as? HTTPURLResponse,
                         httpURLResponse.statusCode == 200,
                         let data = data, error == nil else {
-                            print(error?.localizedDescription ?? "Error status code \((response as? HTTPURLResponse)?.statusCode)")
+                            print(error?.localizedDescription ?? "Error status code \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
                             DispatchQueue.main.async(execute: {
                                 completion(nil)
                             })
@@ -59,11 +59,11 @@ public class FirebaseStorageCache {
         })
     }
     
-    public func remove(storageReference: FIRStorageReference) {
+    public func remove(storageReference: StorageReference) {
         cache.remove(key: filePath(storageReference: storageReference), completion: nil)
     }
     
-    private func filePath(storageReference: FIRStorageReference) -> String {
+    private func filePath(storageReference: StorageReference) -> String {
         return "\(storageReference.bucket)/\(storageReference.fullPath)"
     }
 }

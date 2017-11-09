@@ -11,7 +11,7 @@ import FirebaseStorage
 
 extension UIWebView {
     
-    public func loadHTML(storageReference: FIRStorageReference, cache: FirebaseStorageCache = .main, postProcess: ((Data) -> Data)? = nil) {
+    public func loadHTML(storageReference: StorageReference, cache: FirebaseStorageCache = .main, postProcess: ((Data) -> Data)? = nil) {
         
         cache.get(storageReference: storageReference) { data in
             if let data = data {
@@ -23,7 +23,7 @@ extension UIWebView {
 
 extension WKWebView {
     
-    public func loadHTML(storageReference: FIRStorageReference, cache: FirebaseStorageCache = .main, postProcess: ((Data) -> Data)? = nil) {
+    public func loadHTML(storageReference: StorageReference, cache: FirebaseStorageCache = .main, postProcess: ((Data) -> Data)? = nil) {
         
         cache.get(storageReference: storageReference) { data in
             if let data = data {
