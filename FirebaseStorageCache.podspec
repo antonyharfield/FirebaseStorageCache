@@ -118,7 +118,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "FirebaseStorage"
+  #s.framework  = "FirebaseStorage"
+  s.frameworks  = "FirebaseCore", "FirebaseStorage"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
