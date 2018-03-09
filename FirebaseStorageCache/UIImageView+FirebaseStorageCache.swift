@@ -18,4 +18,11 @@ extension UIImageView {
         }
     }
     
+    public func setImage(downloadURL: String, cache: FirebaseStorageCache = .main) {
+        cache.get(downloadURL: downloadURL) { data in
+            if let data = data, let image = UIImage(data: data) {
+                self.image = image
+            }
+        }
+    }
 }

@@ -59,10 +59,14 @@ public class FirebaseStorageCache {
         })
     }
     
-    public func get(url: URL, completion: @escaping (_ object: Data?) -> Void) {
+    public func get(downloadURL: String, completion: @escaping (_ object: Data?) -> Void) {
+        // Check valid download url
+        guard let url = URL(string: downloadURL) else {
+            completion(nil)
+            return
+        }
         
-        let storageReference = Storage.storage().reference(forURL: url.absoluteString)
-        let filePath = self.filePath(storageReference: storageReference)
+        let filePath = self.filePath(url: url)
         
         cache.get(key: filePath, completion: { object in
             if let object = object {
@@ -99,6 +103,10 @@ public class FirebaseStorageCache {
     
     private func filePath(storageReference: StorageReference) -> String {
         return "\(storageReference.bucket)/\(storageReference.fullPath)"
+    }
+    
+    private func filePath(url: URL) -> String {
+        return "\(url.path)"
     }
 }
 
